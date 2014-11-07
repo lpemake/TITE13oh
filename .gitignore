@@ -4,7 +4,10 @@
 # User-specific files
 *.suo
 *.user
+<<<<<<< HEAD
 *.userosscache
+=======
+>>>>>>> ce8551a6840b8d351cba0915886179f5744fea12
 *.sln.docstates
 
 # Build results
@@ -182,4 +185,7 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
+<<<<<<< HEAD
 
+=======
+>>>>>>> ce8551a6840b8d351cba0915886179f5744fea12
