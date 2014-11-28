@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Koulu.Koulutusohjelma">
+    <Position X="1.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAEAAAAIAAAAEAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Koulutusohjelma.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Ope" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="opiskelijat" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Koulu.Opettaja">
+    <Position X="6.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAIAEAACAAAgQAAAAAACAAAAAAAAAAIA=</HashCode>
+      <FileName>Opettaja.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Koulu.Opiskelija">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAgAAAAAAAAAAEAAAAAAAQAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Opiskelija.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Koulu.Program" Collapsed="true">
+    <Position X="9" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
