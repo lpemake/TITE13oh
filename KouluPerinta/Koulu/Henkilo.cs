@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Koulu
 {
-    class Henkilo
+    abstract class Henkilo // luokka on abstrakti, siitä ei voi luoda oliota
     {
         public string Etunimi { get; private set; }
         public string Sukunimi { get; private set; }

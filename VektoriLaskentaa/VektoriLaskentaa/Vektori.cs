@@ -15,20 +15,27 @@ namespace VektoriLaskentaa
         public Vektori(double x, double y, double z)
         {
             X = x; Y = y; Z = z;
-        }
-
-        // vektorin pituuden laskenta
+        }  
         public double Pituus()
-        {
+        {   // vektorin pituuden laskenta
             double d = X * X + Y * Y + Z * Z;
             return Math.Sqrt(d);
         }
-
         public void Lisaa(Vektori toinenVektori)
         {
             this.X += toinenVektori.X;
             this.Y += toinenVektori.Y;
             this.Z += toinenVektori.Z;
+        }
+        public static Vektori Summa(Vektori a, Vektori b)
+        {
+            Vektori c = new Vektori(a.X + b.X, a.Y + b.Y, a.Z + b.Z);
+            return c;
+        }
+        public override string ToString()
+        {
+            string s = string.Format("{0}i + {1}j + {2}k", X, Y, Z);
+            return s;
         }
 
         public void Vahenna(Vektori toinenVektori)
@@ -44,16 +51,5 @@ namespace VektoriLaskentaa
             return c;
         }
         
-        public static Vektori Summa(Vektori a, Vektori b)
-        {
-            Vektori c = new Vektori(a.X + b.X, a.Y + b.Y, a.Z + b.Z);
-            return c;
-        }
-
-        public override string ToString()
-        {
-            string s = string.Format("{0}i + {1}j + {2}k", X, Y, Z);
-            return s;
-        }
     }
 }

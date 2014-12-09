@@ -27,6 +27,5 @@ namespace Firma
         {
             Palkka += Palkka * prosentti / 100.0;
         }
-
     }
 }

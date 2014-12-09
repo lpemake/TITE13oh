@@ -6,27 +6,17 @@ using System.Threading.Tasks;
 
 namespace Perinta11
 {
-    class Monikulmio : Kuvio
-    {      
-        protected double Kanta { get; set; }
-        protected double Korkeus { get; set; }
-        protected int kulmienMaara;
+    abstract class Monikulmio : Kuvio
+    {
+        
+        public double Kanta { get; set; }
+        public double Korkeus { get; set; }
 
         public Monikulmio(double kanta, double korkeus)
         {
             Kanta = kanta;
             Korkeus = korkeus;
             base.Nimi = "Monikulmio";
-        }
-
-        public override double PintaAla()
-        {   // Tästä tehdään myöhemmin ns. abstrakti metodi
-            return 0;
-        }
-
-        public int KulmienMaara()
-        {
-            return kulmienMaara;
         }
 
     }
@@ -37,7 +27,6 @@ namespace Perinta11
             : base(kanta, korkeus)
         {
             base.Nimi = "Kolmio";
-            base.kulmienMaara = 3;
         }
 
         public override double PintaAla()
@@ -52,7 +41,6 @@ namespace Perinta11
             : base (kanta, korkeus)
         {
             base.Nimi = "Suorakaide";
-            base.kulmienMaara = 4;
         }
 
         public override double PintaAla()
@@ -67,14 +55,15 @@ namespace Perinta11
     {
         static void Main(string[] args)
         {
-            Monikulmio mk = new Monikulmio(4, 5);
+            // Monikulmio-luokka on abstrakti, eikä siitä voi tehdä oliota
+            //Monikulmio mk = new Monikulmio(4, 5);
             Kolmio k = new Kolmio(4, 5);
             Suorakaide s = new Suorakaide(4, 5);
             Ympyra y = new Ympyra(3);
 
             // lista kuvioista
             List<Kuvio> kuviot = new List<Kuvio>();
-            kuviot.Add(mk);
+            //kuviot.Add(mk);
             kuviot.Add(k);
             kuviot.Add(s);
             kuviot.Add(y);
@@ -86,15 +75,6 @@ namespace Perinta11
                 // kutsuttava pinta-alan laskenta määräytyy
                 // olion tyypin mukaan (kolmio, suorakaide, ympyrä...)                
                 pintaAlojenSumma += x.PintaAla();
-
-                Console.WriteLine(x.GetType().ToString());
-
-                if (x is Monikulmio)
-                {
-                    //Monikulmio mv = (Monikulmio)x;
-                    Monikulmio mv = x as Monikulmio;
-                    Console.WriteLine(mv.KulmienMaara());
-                }
             }
 
             int valinta = 2;
@@ -132,7 +112,7 @@ namespace Perinta11
         }
     }
 
-    public class Kuvio
+    public abstract class Kuvio
     {
         public string Nimi { get; protected set; }
 
@@ -141,10 +121,7 @@ namespace Perinta11
             Nimi = "Pelkkä kuvio";
         }
 
-        public virtual double PintaAla()
-        {
-            return 0;
-        }
+        public abstract double PintaAla();
 
         public override string ToString()
         {

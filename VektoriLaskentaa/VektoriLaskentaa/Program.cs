@@ -13,9 +13,13 @@ namespace VektoriLaskentaa
             Vektori a = new Vektori(2, 3, 0);
             Vektori b = new Vektori(6, 4, 0);
 
+            // Lisätään vektori 'b' vektoriin 'a'
+            // Tässä kutsutaan Lisaa-metodia oliolle 'a'
             a.Lisaa(b);
             Console.WriteLine(a.ToString());
 
+            // Lasketaan vektorit 'a' ja 'b' yhteen. Summa on vektoriaa 'c'
+            // Metodi Summa on staattinen, eikä liity mihinkään olioon.
             Vektori c = Vektori.Summa(a, b);
             Console.WriteLine(c.ToString());
 
